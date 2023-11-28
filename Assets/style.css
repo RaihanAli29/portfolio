@@ -1,0 +1,295 @@
+:root {
+  --neutral: #004643;
+  --headline: #fffffe;
+  --highlight: #f9bc60;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--neutral);
+}
+
+/* Hero Section */
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./Images/pexels-tranmautritam-326518.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image .hero-text {
+  color: var(--headline);
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 100px;
+}
+
+.hero-image .hero-text p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navigation */
+
+#nav-bar {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  width: 95%;
+  background-color: var(--neutral);
+  padding: 20px;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-links a {
+  text-decoration: none;
+  padding: 0 25px;
+  color: var(--headline);
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 220px;
+  float: left;
+  margin-right: 20px;
+}
+
+.wrapper {
+  margin: 75px auto;
+  width: 70%;
+}
+
+.text-box {
+  color: var(--headline);
+}
+
+.text-box h2 {
+  font-size: 42px;
+}
+
+.text-box p {
+  font-size: 16px;
+}
+
+.portfolio-box {
+  margin-top: 100px;
+}
+
+.portfolio-box h2 {
+  color: white;
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* CSS Grid */
+
+#categoryGrid {
+  margin: 0px 10%;
+  display: grid;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "branding illustration design"
+    "applications applications design"
+    "survey survey survey";
+}
+
+#branding {
+  grid-area: branding;
+  background-image: url("./Images/hp-screenshot.png");
+}
+#illustration {
+  grid-area: illustration;
+  background-image: url("./Images/Img\ 2.jpg");
+}
+
+#applications {
+  grid-area: applications;
+  background-image: url("./Images/Img\ 3.jpg");
+}
+
+#design {
+  grid-area: design;
+  background-image: url("./Images/Img\ 1.jpg");
+}
+
+#survey {
+  grid-area: survey;
+  background-image: url("./Images/Img\ 4.jpg");
+}
+
+.categoryGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
+
+.heading {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  height: 25px;
+  color: white;
+  font-size: 18px;
+}
+
+/* HTML Link Colors */
+
+a:link {
+  color: var(--headline);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--headline);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--headline);
+  text-decoration: underline;
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--neutral);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+#footer-bar {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+  background-color: var(--neutral);
+  padding: 20px;
+  font-size: 20px;
+}
+
+.footer-links {
+  display: flex;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-links a {
+  text-decoration: none;
+  padding: 0 25px;
+  color: var(--headline);
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  color: var(--headline);
+  font-size: 12px;
+}
+
+/* CSS code specific to smartphones */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+    line-height: 80px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .nav-links {
+    font-size: 16px;
+  }
+
+  .text-box h2 {
+    font-size: 32px;
+  }
+
+  .text-box p {
+    font-size: 14px;
+  }
+
+  .portfolio-box h2 {
+    font-size: 32px;
+  }
+
+  .heading {
+    font-size: 16px;
+  }
+
+  footer {
+    padding: 0.75rem;
+  }
+
+  .footer-links a {
+    padding: 0 15px;
+  }
+
+  .copyright {
+    font-size: 10px;
+  }
+}
+
+/* For screens between 600px to 900px */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  #categoryGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* For screens bigger than 900px */
+@media screen and (min-width: 900px) {
+  #categoryGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
